@@ -1,0 +1,55 @@
+/* --------------------------*/
+// Get Estimate Section
+/* --------------------------*/
+.contactus-section {
+  @include blue-gradient-bg;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  .contactus-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include lg-devices {
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+
+    h1 {
+      font-family: "Ubuntu", sans-serif;
+      color: $bg-white;
+      font-size: 2.5em;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 25px;
+
+      @include md-devices {
+        font-size: 2.6em;
+        margin-bottom: 0;
+      }
+
+      @include lg-devices {
+        text-align: left;
+        margin-bottom: 0;
+        margin-right: 40px;
+      }
+
+      @include xl-devices {
+        font-size: 2.8em;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 12px 30px;
+      @include white-button;
+      min-width: 195px;
+    }
+  }
+}

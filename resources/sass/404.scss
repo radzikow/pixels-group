@@ -1,0 +1,68 @@
+/* --------------------------*/
+// Error Message Section
+/* --------------------------*/
+.error-message-section {
+  background-color: $bg-white;
+
+  .error-message-wrapper {
+    justify-content: center;
+    padding: 80px 20px;
+
+    @include md-devices {
+      padding: 120px;
+    }
+
+    .error-message-img {
+      img {
+        display: block;
+        width: 200px;
+        height: auto;
+        margin: auto;
+      }
+    }
+
+    .error-message-msg {
+      p {
+        text-transform: uppercase;
+        font-size: 2em;
+        font-weight: 800;
+        width: 100%;
+        text-align: center;
+        margin-top: 40px;
+        color: $text-light;
+      }
+    }
+
+    .error-message-button {
+      margin: 50px auto 0 auto;
+
+      a {
+        color: $text-light;
+        // padding: 10px 40px 10px 75px;
+        padding: 10px 40px;
+        text-align: center;
+        font-size: 1.4em;
+        font-weight: 600;
+        position: relative;
+        background-color: $bg-white;
+        left: 50%;
+        border-radius: 40px;
+        transform: translate(-50%, 0);
+        text-transform: uppercase;
+        text-decoration: none;
+        box-shadow: $box-shadow-gentle;
+        position: relative;
+
+        // &::before {
+        //   content: url('/svg/arrow-prev.svg');
+        //   background-position: center;
+        //   background-repeat: no-repeat;
+        //   top: 50%;
+        //   position: absolute;
+        //   transform: translate(0, -37%);
+        //   left: 31px;
+        // }
+      }
+    }
+  }
+}

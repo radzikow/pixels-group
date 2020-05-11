@@ -1,0 +1,172 @@
+.footer-section {
+  background-color: $bg-white;
+  padding-top: 60px;
+  padding-bottom: 50px;
+
+  .footer-wrapper {
+    min-height: 200px;
+    width: 100%;
+
+    .footer-content-wrapper {
+      width: 100%;
+
+      .footer-description {
+        margin-bottom: 25px;
+
+        @include sm-devices {
+        }
+
+        @include md-devices {
+          flex: 30;
+          width: 30%;
+          margin-right: 30px;
+        }
+
+        h2 {
+          font-size: 1.6em;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+
+        p {
+          font-size: 1.1em;
+          line-height: 1.7em;
+          color: $text-light;
+        }
+      }
+
+      .footer-links {
+        margin-bottom: 25px;
+
+        @include sm-devices {
+        }
+
+        @include md-devices {
+          flex: 30;
+          width: 30%;
+          margin-right: 30px;
+        }
+
+        h2 {
+          font-size: 1.6em;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+
+        ul {
+          list-style-type: none;
+          text-align: left;
+
+          li {
+            background: url("/svg/list-item.svg") no-repeat left center;
+            padding: 3px 0px 3px 10px;
+            list-style: none;
+            margin: 0;
+            padding-left: 27px;
+            margin-bottom: 2px;
+            font-size: 1.1em;
+            color: $text-light;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+              color: $primary;
+            }
+
+            a {
+              text-decoration: none;
+              color: inherit;
+            }
+          }
+        }
+      }
+
+      .footer-contact {
+        margin-bottom: 25px;
+
+        @include sm-devices {
+        }
+
+        @include md-devices {
+          flex: 30;
+          width: 30%;
+        }
+
+        h2 {
+          font-size: 1.6em;
+          font-weight: 600;
+          margin-bottom: 20px;
+        }
+
+        p {
+          font-size: 1.1em;
+          line-height: 1.7em;
+          color: $text-light;
+        }
+
+        ul {
+          width: fit-content;
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          margin-top: 30px;
+
+          @include md-devices {
+            justify-content: left;
+            margin-top: 0;
+          }
+
+          li {
+            margin-right: auto;
+            background-color: $primary;
+            border-radius: 50%;
+            padding: 10px;
+            margin-right: 20px;
+            width: 40px;
+            height: 40px;
+            transition: all 0.2s ease-in-out;
+            opacity: 0.8;
+            cursor: pointer;
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            &:hover {
+              transform: rotate(360deg);
+              opacity: 1;
+            }
+
+            img {
+              color: $bg-white;
+              display: block;
+              margin: auto;
+              width: 21px;
+              height: 21px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer-bottom-section {
+  background-color: $text-dark;
+
+  .footer-bottom-wrapper {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+
+    p {
+      margin: 0;
+      color: $bg-white;
+      padding: 8px;
+      font-size: 0.9em;
+    }
+  }
+}
