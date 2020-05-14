@@ -15,7 +15,7 @@
       cursor: pointer;
       transition: all 0.3s;
       @include blue-gradient-bg;
-      opacity: .8;
+      opacity: 0.8;
 
       &:hover {
         opacity: 1;
@@ -58,7 +58,7 @@
           margin: 0;
 
           .logo-x {
-            color: $primary;
+            @include gradient-text;
           }
 
           .logo-group {
@@ -77,8 +77,6 @@
 
     .navbar-toggler {
       border: none;
-      // outline-color: $primary;
-      // -moz-outline-radius: 5px;
       outline: none;
 
       .navbar-burger {
@@ -107,7 +105,7 @@
             font-size: 1.2em;
 
             &:hover {
-              color: $primary;
+              @include gradient-text;
             }
 
             @include md-devices {
@@ -123,20 +121,26 @@
       display: none;
       cursor: pointer;
       transition: all 0.3s;
-      opacity: .8;
+      opacity: 0.8;
 
       &:hover {
         opacity: 1;
       }
 
       @include md-devices {
-        display: block;
-        // background-color: $primary;
-        // border-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         padding: 8px 18px;
         margin-left: 20px;
         @include blue-gradient-bg;
         border-radius: 25px;
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 7px;
       }
 
       a {

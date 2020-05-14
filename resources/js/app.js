@@ -61,8 +61,16 @@ $(document).ready(function () {
   /* --------------------------*/
 
   if ($(window).width() > 1050) {
-    document.querySelector('.welcome-text-wrapper').classList.add('animated', 'bounceInLeft', 'showElement');
-    document.querySelector('.welcome-image-wrapper').classList.add('animated', 'bounceInRight', 'showElement');
+
+    const welcomeTextWrapper = document.querySelector('.welcome-text-wrapper');
+    const welcomeImageWrapper = document.querySelector('.welcome-image-wrapper');
+
+    if (welcomeTextWrapper) {
+      welcomeTextWrapper.classList.add('animated', 'bounceInLeft', 'showElement');
+    }
+    if (welcomeImageWrapper) {
+      welcomeImageWrapper.classList.add('animated', 'bounceInRight', 'showElement');
+    }
   }
 
   // Check if element is scrolled into view
@@ -151,3 +159,24 @@ $(window).on('load', function () {
   $("body").removeClass("preload");
 });
 
+
+/* --------------------------*/
+// Handle checkbox in contact form
+/* --------------------------*/
+
+const policyLabel = document.getElementById('policyLabel');
+
+if (policyLabel) {
+  policyLabel.addEventListener('click', handleCheckbox);
+}
+
+function handleCheckbox() {
+
+  let checkbox = document.getElementById('policyInput');
+
+  if (checkbox.checked == false) {
+    checkbox.checked = true;
+  } else {
+    checkbox.checked = false;
+  }
+}

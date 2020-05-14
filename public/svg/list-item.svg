@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 23.047 23.047"><path d="M16.3,16.3H0V0H16.3Z" transform="translate(0 11.523) rotate(-45)" fill="#469dc9"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.77" height="16.77" viewBox="0 0 16.77 16.77">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.475" y1="0.03" x2="1.456" y2="1.207" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#469dc9"/>
+      <stop offset="1" stop-color="#38c172"/>
+    </linearGradient>
+  </defs>
+  <path id="Icon_awesome-square-full" data-name="Icon awesome-square-full" d="M11.858,11.858H0V0H11.858Z" transform="translate(0 8.385) rotate(-45)" fill="url(#linear-gradient)"/>
+</svg>

@@ -66,16 +66,16 @@
             margin-bottom: 2px;
             font-size: 1.1em;
             color: $text-light;
-            cursor: pointer;
             transition: all 0.3s;
-
-            &:hover {
-              color: $primary;
-            }
 
             a {
               text-decoration: none;
               color: inherit;
+              cursor: pointer;
+
+              &:hover {
+                @include gradient-text;
+              }
             }
           }
         }
@@ -121,7 +121,7 @@
 
           li {
             margin-right: auto;
-            background-color: $primary;
+            // background-color: $primary;
             border-radius: 50%;
             padding: 10px;
             margin-right: 20px;
@@ -130,6 +130,9 @@
             transition: all 0.2s ease-in-out;
             opacity: 0.8;
             cursor: pointer;
+            background: -moz-radial-gradient(closest-corner, $primary, $second-primary);
+            background: -webkit-radial-gradient(closest-corner, $primary, $second-primary);
+            background: radial-gradient(closest-corner, $primary, $second-primary);
 
             &:last-child {
               margin-right: 0;

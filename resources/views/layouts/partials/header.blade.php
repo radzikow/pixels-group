@@ -52,6 +52,7 @@
 
     {{-- Phone number --}}
     <div id="navbarPhoneNumber" class="navbar-phone-number animated pulse infinite">
+      <img src="/svg/phone.svg" alt="Call us">
       <a href="tel:555-555-555">CALL US</a>
     </div>
 

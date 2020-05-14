@@ -10,8 +10,7 @@
       <div class="col text-center title-wrapper">
         <h2 class="section-title">Estimate your project</h2>
         <p class="section-additional-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua.
+          Fill out the form below to receive an approximate quote for your project. The final price is set before the contract is signed.
         </p>
       </div>
     </div>

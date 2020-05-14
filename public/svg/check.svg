@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="44.919" height="44.349" viewBox="0 0 44.919 44.349"><g transform="translate(1.504 1.524)"><path d="M44.294,21.751v1.9A20.647,20.647,0,1,1,32.05,4.779" transform="translate(-3 -2.991)" fill="none" stroke="#469dc9" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/><path d="M40.341,6,19.694,26.668,13.5,20.474" transform="translate(0.953 -1.858)" fill="none" stroke="#469dc9" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29.282" height="29.282" viewBox="0 0 29.282 29.282">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.167" y1="1.185" x2="1.297" y2="-0.094" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#469dc9"/>
+      <stop offset="1" stop-color="#38c172"/>
+    </linearGradient>
+  </defs>
+  <path id="Icon_ionic-md-checkbox-outline" data-name="Icon ionic-md-checkbox-outline" d="M12.471,16.05l-2.277,2.277,7.32,7.32L33.782,9.38,31.5,7.1,17.514,21.011ZM30.528,30.528H7.754V7.754H24.021V4.5H7.754A3.263,3.263,0,0,0,4.5,7.754V30.528a3.263,3.263,0,0,0,3.254,3.254H30.528a3.263,3.263,0,0,0,3.254-3.254V17.514H30.528Z" transform="translate(-4.5 -4.5)" fill="url(#linear-gradient)"/>
+</svg>

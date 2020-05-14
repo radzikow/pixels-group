@@ -3,16 +3,12 @@
 
     <div class="row footer-content-wrapper">
 
-      <div class="col-md-4 footer-description">
-        <h2>About our company</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor
-          Incididunt ut labore et dolore magna
-          aliqua. Ut enim ad minim veniam,nostrud
-          exercitation.</p>
+      <div class="col-md-6 footer-description">
+        <h2>About Pixels Group</h2>
+        <p>Our company offers the creation and maintenance of modern websites and web applications tailored to the client's requirements. We do not use ready-made templates, we create pages from scratch. We have been operating under the name Pixels Group since the beginning of 2020.</p>
       </div>
 
-      <div class="col-md-4 footer-links">
+      <div class="col-md-3 footer-links">
         <h2>Find out more</h2>
         <ul>
           <li><a href="{{ url('/estimate') }}">Estimate project</a></li>
@@ -22,7 +18,7 @@
         </ul>
       </div>
 
-      <div class="col-md-4 footer-contact">
+      <div class="col-md-3 footer-contact">
         <h2>Contact information</h2>
         <p>
           M2 4WU, 15 Central St<br>
@@ -43,6 +39,6 @@
 
 <section class="footer-bottom-section">
   <div class="footer-bottom-wrapper">
-    <p>Pixels Group Ltd. © 2020 All rights reserved.</p>
+    <p>Pixels Group © All rights reserved.</p>
   </div>
 </section>

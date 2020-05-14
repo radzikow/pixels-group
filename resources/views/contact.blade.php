@@ -59,34 +59,79 @@
 
     <div class="row contact-form-content-wrapper">
 
-      <form action="" method="">
+      <form action="/contact/mail" method="POST">
+        @csrf
 
         <div class="col col-md-10 offset-md-1 contact-form-content">
 
+          <div class="row main-msg-wrapper">
+            @if ($errors->any())
+            <div class="main-msg main-msg-danger">
+              <p>Error occured! Please verify all the
+                fields.</p>
+            </div>
+            <div class="main-msg main-msg-primary">
+              <p>If you have problem sending the form below, you can write to us directly at
+                <span>hello@pixels.group</span></p>
+            </div>
+            @endif
+          </div>
+
           <div class="row contact-info">
             <div class="col-md-4">
-              <input type="text" placeholder="Name and surname">
+              <label for="name">Name and surname*</label>
+              <input type="text" name="name" placeholder="Name and surname" value="{{ old('name') }}">
+              @error('name')
+              <div class="msg msg-danger">{{ $message }}</div>
+              @enderror
             </div>
             <div class="col-md-4">
-              <input type="text" placeholder="E-mail address">
+              <label for="email">E-mail address*</label>
+              <input type="text" name="email" placeholder="E-mail address" value="{{ old('email') }}">
+              @error('email')
+              <div class="msg msg-danger">{{ $message }}</div>
+              @enderror
             </div>
             <div class="col-md-4">
-              <input type="text" placeholder="Phone number">
+              <label for="phone">Phone number</label>
+              <input type="text" name="phone" placeholder="Phone number" value="{{ old('phone') }}">
+              @error('phone')
+              <div class="msg msg-danger">{{ $message }}</div>
+              @enderror
             </div>
           </div>
 
-          <div class="message">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Write your message..."></textarea>
+          <div class="message-wrapper">
+            <label for="message">Message*</label>
+            <textarea name="message" cols="30" rows="10"
+              placeholder="Write a message...">{{ old('message') }}</textarea>
+            @error('message')
+            <div class="msg msg-danger">{{ $message }}</div>
+            @enderror
           </div>
 
-          <div class="row privacy">
-            <label for="checkbox-privacy">
-              <input type="checkbox" name="checkbox-privacy" id="checkbox-privacy">
+          <div class="row file-wrapper">
+            <label for="file">Files (max size 10MB)</label>
+            <input id="fileInput" type="file" name="file" hidden>
+            <button onclick="document.getElementById('fileInput').click();" type="button" class="file">
+              Upload files
+            </button>
+            @error('file')
+            <div class="msg msg-danger msg-file">{{ $message }}</div>
+            @enderror
+          </div>
+
+          <div class="row privacy-wrapper">
+            <label for="policy" id="policyLabel">
+              <input type="checkbox" name="policy" id="policyInput" id="checkbox-privacy" hidden>
               <span class="label-text">
                 I allow the processing of my personal data and accept <a href="{{ url('/cookies') }}"> privacy & cookies
                   policy</a>
               </span>
             </label>
+            @error('policy')
+            <div class="msg msg-danger msg-policy">{{ $message }}</div>
+            @enderror
           </div>
 
           <div class="row button">

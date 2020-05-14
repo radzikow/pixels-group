@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="49.129" height="35.092" viewBox="0 0 49.129 35.092"><path d="M11.009,45.592H21.537l7.018-14.037V10.5H7.5V31.555H18.028Zm28.074,0H49.611l7.018-14.037V10.5H35.574V31.555H46.1Z" transform="translate(-7.5 -10.5)" fill="#469dc9"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49.129" height="35.092" viewBox="0 0 49.129 35.092">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.056" y1="1.178" x2="1.093" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#469dc9"/>
+      <stop offset="1" stop-color="#38c172"/>
+    </linearGradient>
+  </defs>
+  <path id="Icon_material-format-quote" data-name="Icon material-format-quote" d="M11.009,45.592H21.537l7.018-14.037V10.5H7.5V31.555H18.028Zm28.074,0H49.611l7.018-14.037V10.5H35.574V31.555H46.1Z" transform="translate(-7.5 -10.5)" fill="url(#linear-gradient)"/>
+</svg>

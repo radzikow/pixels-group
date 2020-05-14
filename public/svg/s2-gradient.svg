@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150.601" height="150.601" viewBox="0 0 150.601 150.601">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.234" y1="1" x2="1.289" y2="-0.115" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#469dc9"/>
+      <stop offset="1" stop-color="#38c172"/>
+    </linearGradient>
+  </defs>
+  <g id="blackboard-data-summary-annual-report" transform="translate(-1 -1)" opacity="0.9">
+    <path id="Path_498" data-name="Path 498" d="M79.438,1H73.163V7.275H1v100.4H55.856L38.65,147.82V151.6h6.275v-2.494l17.755-41.431H73.163V151.6h6.275V107.676H89.921l17.755,41.431V151.6h6.275V147.82L96.745,107.676H151.6V7.275H79.438ZM26.1,101.4V95.126H44.925V101.4Zm119.226,0H51.2V88.851H19.825V101.4H7.275V13.55H145.326Z" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+    <path id="Path_499" data-name="Path 499" d="M38.749,33.773,60.712,55.735l43.006-43.006L99.281,8.293l-38.57,38.57L38.749,24.9,8.293,55.356l4.436,4.436Z" transform="translate(15.589 15.589)" fill="url(#linear-gradient)"/>
+    <rect id="Rectangle_565" data-name="Rectangle 565" width="7" height="18" transform="translate(94.999 70.461)" fill="url(#linear-gradient)"/>
+    <rect id="Rectangle_566" data-name="Rectangle 566" width="7" height="34" transform="translate(109.999 54.461)" fill="url(#linear-gradient)"/>
+    <rect id="Rectangle_567" data-name="Rectangle 567" width="7" height="50" transform="translate(125.999 38.461)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

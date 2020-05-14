@@ -19,8 +19,8 @@
 
         <h2>INTRODUCTION</h2>
 
-        <p>Pixels Group Ltd. may use cookies, web beacons, tracking pixels, and other tracking technologies when you
-          visit our website pixels-group.co, including any
+        <p>Pixels Group may use cookies, web beacons, tracking pixels, and other tracking technologies when you
+          visit our website pixels.group, including any
           other media form, media channel, mobile website, or mobile application related or connected thereto
           (collectively, the “Site”) to help customize the Site
           and improve your experience.
@@ -220,8 +220,6 @@
 
   </div>
 </section>
-
-
 
 {{-- Get Estimate Section --}}
 @include('layouts.partials.contactus')
