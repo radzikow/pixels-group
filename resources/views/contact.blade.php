@@ -59,32 +59,50 @@
 
     <div class="row contact-form-content-wrapper">
 
-      <form action="/contact/mail" method="POST">
+      {{-- Contact form --}}
+      <form action="/contact/mail" method="POST" enctype="multipart/form-data">
         @csrf
 
         <div class="col col-md-10 offset-md-1 contact-form-content">
 
+          {{-- Alerts after validation --}}
           <div class="row main-msg-wrapper">
             @if ($errors->any())
             <div class="main-msg main-msg-danger">
               <p>Error occured! Please verify all the
                 fields.</p>
             </div>
+
             <div class="main-msg main-msg-primary">
-              <p>If you have problem sending the form below, you can write to us directly at
-                <span>hello@pixels.group</span></p>
+              <p>Can't send message thru the form? You can write to us directly at
+                <span id="mailBtn" class="tooltip">hello@pixels.group
+                  <span class="tooltiptext mailTooltipText">Copy</span></span></p>
             </div>
             @endif
           </div>
 
+          {{-- Alerts after sending message --}}
+          @if(Session::has('mailAlert') && Session::has('mailStatus'))
+          <div class="row main-msg-wrapper">
+            <div
+              class="main-msg {{ Session::get('mailStatus') == 'success' ?  'main-msg-success' : 'main-msg-danger'}}">
+              <p>{{ Session::get('mailAlert') }}</p>
+            </div>
+          </div>
+          @endif
+
           <div class="row contact-info">
             <div class="col-md-4">
+
+              {{-- name --}}
               <label for="name">Name and surname*</label>
               <input type="text" name="name" placeholder="Name and surname" value="{{ old('name') }}">
               @error('name')
               <div class="msg msg-danger">{{ $message }}</div>
               @enderror
             </div>
+
+            {{-- e-mail --}}
             <div class="col-md-4">
               <label for="email">E-mail address*</label>
               <input type="text" name="email" placeholder="E-mail address" value="{{ old('email') }}">
@@ -92,6 +110,8 @@
               <div class="msg msg-danger">{{ $message }}</div>
               @enderror
             </div>
+
+            {{-- phone --}}
             <div class="col-md-4">
               <label for="phone">Phone number</label>
               <input type="text" name="phone" placeholder="Phone number" value="{{ old('phone') }}">
@@ -101,6 +121,7 @@
             </div>
           </div>
 
+          {{-- message --}}
           <div class="message-wrapper">
             <label for="message">Message*</label>
             <textarea name="message" cols="30" rows="10"
@@ -110,22 +131,26 @@
             @enderror
           </div>
 
+          {{-- file --}}
           <div class="row file-wrapper">
-            <label for="file">Files (max size 10MB)</label>
+            <label for="file">Upload file (max 5MB)</label>
             <input id="fileInput" type="file" name="file" hidden>
-            <button onclick="document.getElementById('fileInput').click();" type="button" class="file">
-              Upload files
+            <button id="fileBtn" onclick="document.getElementById('fileInput').click();" type="button" class="file">
+              Upload file
             </button>
+
             @error('file')
             <div class="msg msg-danger msg-file">{{ $message }}</div>
             @enderror
           </div>
 
+          {{-- policy --}}
           <div class="row privacy-wrapper">
             <label for="policy" id="policyLabel">
-              <input type="checkbox" name="policy" id="policyInput" id="checkbox-privacy" hidden>
+              <input type="checkbox" name="policy" id="policy" class="checkbox-privacy"
+                {{ old('policy') == 'on' ? 'checked' : '' }}>
               <span class="label-text">
-                I allow the processing of my personal data and accept <a href="{{ url('/cookies') }}"> privacy & cookies
+                I allow the processing of my personal data and accept <a href="{{ url('/cookies') }}" target="_blank"> privacy & cookies
                   policy</a>
               </span>
             </label>
@@ -134,6 +159,7 @@
             @enderror
           </div>
 
+          {{-- submit --}}
           <div class="row button">
             <button type="submit">SEND MESSAGE</button>
           </div>
@@ -151,7 +177,7 @@
 <section class="map-section">
   <div class="map-wrapper">
 
-    {{-- Map goes below --}}
+    {{-- google map --}}
     <div class="contact-map">
       <div class="mapouter">
         <div class="gmap_canvas"><iframe

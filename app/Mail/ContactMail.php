@@ -11,7 +11,7 @@ class ContactMail extends Mailable
 {
   use Queueable, SerializesModels;
 
-  protected $mail;
+  public $mail;
 
   /**
    * Create a new message instance.
@@ -30,15 +30,20 @@ class ContactMail extends Mailable
    */
   public function build()
   {
-    return $this->from($this->mail->email, $this->mail->name)
+    $senderMail = $this->mail->email;
+    $senderName = $this->mail->name;
+    $fileName = $this->mail->fileName;
+    $fileType = $this->mail->fileType;
+    $filePath = $this->mail->filePath;
+
+    return $this->from($senderMail, $senderName)
       ->subject('Wiadomość z formularza kontaktowego - pixels.group')
+      ->replyTo($senderMail, $senderName)
       ->view('mails.contact')
       ->text('mails.contact_plain')
-      ->with([
-        'name' => $this->mail->name,
-        'email' => $this->mail->email,
-        'phone' => $this->mail->phone,
-        'message' => $this->mail->message
+      ->attach($filePath, [
+        'as' => $fileName,
+        'mime' => $fileType,
       ]);
   }
 }

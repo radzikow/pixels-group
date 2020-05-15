@@ -1,15 +1,7 @@
-Hello {{ $demo->receiver }},
-This is a demo email for testing purposes! Also, it's the HTML version.
+Message from pixels.group contact form
 
-Demo object values:
+Name: {{ $mail->name }}
+E-mail: {{ $mail->email }}
+Phone: {{ $mail->phone }}
+Message: {{ $mail->message }}
 
-Demo One: {{ $demo->demo_one }}
-Demo Two: {{ $demo->demo_two }}
-
-Values passed by With method:
-
-testVarOne: {{ $testVarOne }}
-testVarOne: {{ $testVarOne }}
-
-Thank You,
-{{ $demo->sender }}

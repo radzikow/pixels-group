@@ -66,10 +66,10 @@ $(document).ready(function () {
     const welcomeImageWrapper = document.querySelector('.welcome-image-wrapper');
 
     if (welcomeTextWrapper) {
-      welcomeTextWrapper.classList.add('animated', 'bounceInLeft', 'showElement');
+      welcomeTextWrapper.classList.add('animated', 'fadeInLeft', 'showElement');
     }
     if (welcomeImageWrapper) {
-      welcomeImageWrapper.classList.add('animated', 'bounceInRight', 'showElement');
+      welcomeImageWrapper.classList.add('animated', 'fadeInRight', 'showElement');
     }
   }
 
@@ -99,14 +99,14 @@ $(document).ready(function () {
 
       $('.whyus-image-wrapper').each(function () {
         if (isScrolledIntoView(this) === true) {
-          $(this).addClass('animated bounceInLeft');
+          $(this).addClass('animated fadeInLeft');
           $(this).addClass('showElement');
         }
       });
 
       $('.whyus-content-wrapper').each(function () {
         if (isScrolledIntoView(this) === true) {
-          $(this).addClass('animated bounceInRight');
+          $(this).addClass('animated fadeInRight');
           $(this).addClass('showElement');
         }
       });
@@ -127,14 +127,14 @@ $(document).ready(function () {
 
       $('.ourwork-content-info').each(function () {
         if (isScrolledIntoView(this) === true) {
-          $(this).addClass('animated bounceInLeft');
+          $(this).addClass('animated fadeInLeft');
           $(this).addClass('showElement');
         }
       });
 
       $('.ourwork-content-notebook').each(function () {
         if (isScrolledIntoView(this) === true) {
-          $(this).addClass('animated bounceInRight');
+          $(this).addClass('animated fadeInRight');
           $(this).addClass('showElement');
         }
       });
@@ -165,18 +165,68 @@ $(window).on('load', function () {
 /* --------------------------*/
 
 const policyLabel = document.getElementById('policyLabel');
+const policyCheckbox = document.getElementById('policy');
 
 if (policyLabel) {
   policyLabel.addEventListener('click', handleCheckbox);
 }
 
+if (policyCheckbox) {
+  policyCheckbox.addEventListener('click', handleCheckbox);
+}
+
 function handleCheckbox() {
 
-  let checkbox = document.getElementById('policyInput');
+  let checkboxStatus = document.getElementById('policy').checked;
 
-  if (checkbox.checked == false) {
-    checkbox.checked = true;
+  if (checkboxStatus == false) {
+    checkboxStatus = true;
   } else {
-    checkbox.checked = false;
+    checkboxStatus = false;
   }
+}
+
+
+// =================================
+// Upload files in contact form
+// =================================
+
+// File number
+$('#fileInput').change(function () {
+  var reader = new FileReader();
+  reader.onload = (e) => {
+    $('#fileBtn').css('color', '#469dc9');
+    var filename = $('#fileInput').val().replace(/C:\\fakepath\\/i, '')
+    $('#fileBtn').html(filename);
+
+    $('#fileBtn2').css('visibility', 'visible');
+  }
+  reader.readAsDataURL(this.files[0]);
+});
+
+
+// =================================
+// Login form tooltips: copy/change text
+// =================================
+
+const mailBtn = document.getElementById('mailBtn');
+
+if (mailBtn) {
+  mailBtn.addEventListener('click', () => {
+    document.execCommand("copy");
+  });
+
+  mailBtn.addEventListener("copy", (event) => {
+    event.preventDefault();
+    if (event.clipboardData) {
+      event.clipboardData.setData("text/plain", 'hello@pixels.group');
+      let mailTooltipText = document.querySelector('.mailTooltipText');
+      mailTooltipText.innerHTML = 'Copied!'
+    }
+  });
+
+  mailBtn.addEventListener('mouseleave', () => {
+    let mailTooltipText = document.querySelector('.mailTooltipText');
+    mailTooltipText.innerHTML = 'Copy'
+  });
 }
