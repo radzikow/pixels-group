@@ -40160,8 +40160,10 @@ $(document).ready(function () {
     if ($(window).width() > 1050) {
       $('.title-wrapper').each(function () {
         if (isScrolledIntoView(this) === true) {
-          $(this).addClass('animated fadeIn');
-          $(this).addClass('showElement');
+          if ($(this).hasClass('hideElement')) {
+            $(this).addClass('animated fadeIn');
+            $(this).addClass('showElement');
+          }
         }
       });
       $('.whyus-image-wrapper').each(function () {

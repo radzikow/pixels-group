@@ -57,11 +57,10 @@ class ContactMailController extends Controller
 
     // ------------------------------
     // send mail
-
+    Mail::to('hello@pixels.group')->send(new ContactMail($mailObj));
     /* ----------- NOTE ----------- */
     /* Change e-mail receiver address if needed */
     /* --------- END NOTE --------- */
-    Mail::to('hello@pixels.group')->send(new ContactMail($mailObj));
 
     // ------------------------------
     // sending mail failed

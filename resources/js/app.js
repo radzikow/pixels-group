@@ -92,8 +92,11 @@ $(document).ready(function () {
 
       $('.title-wrapper').each(function () {
         if (isScrolledIntoView(this) === true) {
-          $(this).addClass('animated fadeIn');
-          $(this).addClass('showElement');
+
+          if ($(this).hasClass('hideElement')) {
+            $(this).addClass('animated fadeIn');
+            $(this).addClass('showElement');
+          }
         }
       });
 
