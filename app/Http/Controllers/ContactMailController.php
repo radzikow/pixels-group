@@ -38,7 +38,7 @@ class ContactMailController extends Controller
     // ------------------------------
     // redirect
     if ($validator->fails()) {
-      return redirect('contact')
+      return redirect('contact#contactSection')
         ->withErrors($validator)
         ->withInput();
     }
@@ -58,9 +58,6 @@ class ContactMailController extends Controller
     // ------------------------------
     // send mail
     Mail::to('hello@pixels.group')->send(new ContactMail($mailObj));
-    /* ----------- NOTE ----------- */
-    /* Change e-mail receiver address if needed */
-    /* --------- END NOTE --------- */
 
     // ------------------------------
     // sending mail failed
@@ -68,7 +65,7 @@ class ContactMailController extends Controller
       Session::flash('mailAlert', 'Error occured while sending message. Please try again later.');
       Session::flash('mailStatus', 'error');
 
-      return redirect('contact');
+      return redirect('contact#contactSection');
     }
 
     // ------------------------------
@@ -76,6 +73,6 @@ class ContactMailController extends Controller
     Session::flash('mailAlert', 'Your message has been sent. We will contact you shortly.');
     Session::flash('mailStatus', 'success');
 
-    return redirect('contact');
+    return redirect('contact#contactSection');
   }
 }

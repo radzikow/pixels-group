@@ -48,7 +48,7 @@
 
 
 {{-- Contact Form Section --}}
-<section class="contact-form-section">
+<section id="contactSection" class="contact-form-section">
   <div class="container contact-form-wrapper">
 
     <div class="row contact-form-title-wrapper">
