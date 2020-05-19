@@ -16,9 +16,7 @@ Route::get('/', function () {
 // ==============================
 // Contact
 // ==============================
-Route::get('/contact', function () {
-  return view('contact');
-});
+Route::get('/contact', 'ContactMailController@index');
 
 // handle contact form
 Route::post('contact/mail', 'ContactMailController@send');
@@ -47,9 +45,10 @@ Route::get('/cookies', function () {
 // ==============================
 // Estimate
 // ==============================
-Route::get('/estimate', function () {
-  return view('estimate');
-});
+Route::get('/estimate', 'EstimateController@index');
+
+// handle contact form
+Route::post('estimate/query', 'EstimateController@query');
 
 
 // ==============================

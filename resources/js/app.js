@@ -1,11 +1,6 @@
 require('./bootstrap');
 require('../../node_modules/slick-carousel/slick/slick');
 
-/* --------------------------*/
-// Animations
-/* --------------------------*/
-// require('./animate');
-
 
 /* --------------------------*/
 // Pge Loader
@@ -209,7 +204,7 @@ $('#fileInput').change(function () {
 
 
 // =================================
-// Login form tooltips: copy/change text
+// Contact form tooltips: copy/change text
 // =================================
 
 const mailBtn = document.getElementById('mailBtn');
@@ -233,3 +228,45 @@ if (mailBtn) {
     mailTooltipText.innerHTML = 'Copy'
   });
 }
+
+
+// =================================
+// Upload files in estimate form
+// =================================
+
+$('#uploadFilesInput').change(function () {
+  var reader = new FileReader();
+  reader.onload = (e) => {
+    var files = $('#uploadFilesInput').prop("files");
+    var filesArray = Array.from(files);
+    $('#uploadFilesBtn').addClass('button-success');
+
+    for (var i = 0; i < filesArray.length; i++) {
+      $('#inputText').html('Uploaded files: ');
+      $('#uploadedFileNames').append(filesArray[i].name + ', ');
+    }
+
+  }
+  reader.readAsDataURL(this.files[0]);
+});
+
+
+// =================================
+// Estimate form, handle services
+// =================================
+
+let services = [...document.querySelectorAll('.estimate-services-single')];
+
+services.forEach((el) => {
+  el.addEventListener('click', () => {
+    let checkbox = el.getElementsByTagName('input')[0];
+    if (checkbox.checked == true) {
+      checkbox.checked = false;
+      el.classList.remove('selectedService');
+    } else {
+      checkbox.checked = true;
+      el.classList.add('selectedService');
+    }
+  });
+});
+

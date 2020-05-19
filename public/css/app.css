@@ -14643,36 +14643,143 @@ body {
   }
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-details-wrapper .estimate-details-title {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .main-msg-wrapper {
+  margin-bottom: 30px;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .main-msg-wrapper .main-msg {
+  width: 100%;
+  padding: 10px 15px;
+  text-align: center;
+  line-height: 1.7em;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .main-msg-wrapper .main-msg p {
+  margin: 0;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .main-msg-wrapper .main-msg p .tooltip {
+  font-weight: 500;
+  position: relative;
+  display: inline-block;
+  opacity: 1;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .main-msg-wrapper .main-msg p .tooltip .tooltiptext {
+  visibility: hidden;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #469dc9;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 13px;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 1em;
+  text-decoration: none;
+  top: -33px;
+  left: 50%;
+  transform: translate(-50%, 0px);
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .main-msg-wrapper .main-msg p .tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #469dc9 transparent transparent transparent;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .main-msg-wrapper .main-msg p .tooltip:hover {
+  color: #469dc9;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .main-msg-wrapper .main-msg p .tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .main-msg-wrapper .main-msg p .tooltip:active {
+  text-decoration: underline;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .main-msg-wrapper .main-msg-danger {
+  border: 1px solid #ea7a7a;
+  background: #ffe3e3;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .main-msg-wrapper .main-msg-danger p {
+  color: #ea7a7a;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .main-msg-wrapper .main-msg-success {
+  border: 1px solid #2e8d56;
+  background: #b9ffc9;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .main-msg-wrapper .main-msg-success p {
+  color: #2e8d56;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .main-msg-wrapper .main-msg-warning {
+  border: 1px solid #a88929;
+  background: #fffeb9;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .main-msg-wrapper .main-msg-warning p {
+  color: #a88929;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .main-msg-wrapper .main-msg-primary {
+  border: 1px solid #585757;
+  background: white;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .main-msg-wrapper .main-msg-primary p {
+  color: #585757;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-details-wrapper .estimate-details-title {
   width: 100%;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-details-wrapper .estimate-details-title h3 {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-details-wrapper .estimate-details-title h3 {
   font-size: 1.3em;
   margin-bottom: 45px;
   font-weight: 600;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-details-wrapper .estimate-details {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-details-wrapper .estimate-details {
   margin-bottom: 40px;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-details-wrapper .estimate-details .estimate-detail-single {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-details-wrapper .estimate-details .estimate-detail-single {
   margin-right: 30px;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-details-wrapper .estimate-details .estimate-detail-single h4 {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-details-wrapper .estimate-details .estimate-detail-single h4 {
   font-size: 0.85em;
   font-weight: 600;
   color: #585757;
   margin-bottom: 14px;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-details-wrapper .estimate-details .estimate-detail-single h4 span {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-details-wrapper .estimate-details .estimate-detail-single h4 span {
   color: #ff6584;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-details-wrapper .estimate-details .estimate-detail-single input {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-details-wrapper .estimate-details .estimate-detail-single input {
   overflow: visible;
   border: none;
   border-radius: 0;
@@ -14681,52 +14788,66 @@ body {
   width: 100%;
   transition: all 0.2s;
   outline: none !important;
+  color: #469dc9;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-details-wrapper .estimate-details .estimate-detail-single input:focus {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-details-wrapper .estimate-details .estimate-detail-single input:focus {
   border-bottom: 2px solid #469dc9;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-details-wrapper .estimate-details .estimate-detail-single input::-webkit-input-placeholder {
-  color: #d2d2d2;
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-details-wrapper .estimate-details .estimate-detail-single input:focus label {
+  color: #469dc9 !important;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-details-wrapper .estimate-details .estimate-detail-single input::-moz-placeholder {
-  color: #d2d2d2;
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-details-wrapper .estimate-details .estimate-detail-single input::-webkit-input-placeholder {
+  color: #b6b6b6;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-details-wrapper .estimate-details .estimate-detail-single input:-ms-input-placeholder {
-  color: #d2d2d2;
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-details-wrapper .estimate-details .estimate-detail-single input::-moz-placeholder {
+  color: #b6b6b6;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-details-wrapper .estimate-details .estimate-detail-single input::-ms-input-placeholder {
-  color: #d2d2d2;
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-details-wrapper .estimate-details .estimate-detail-single input:-ms-input-placeholder {
+  color: #b6b6b6;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-details-wrapper .estimate-details .estimate-detail-single input::placeholder {
-  color: #d2d2d2;
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-details-wrapper .estimate-details .estimate-detail-single input::-ms-input-placeholder {
+  color: #b6b6b6;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-details-wrapper .estimate-details .estimate-detail-single .error-msg {
-  font-size: 0.76em;
-  color: #ff6584;
-  font-weight: 600;
-  margin-top: 8px;
-  display: none;
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-details-wrapper .estimate-details .estimate-detail-single input::placeholder {
+  color: #b6b6b6;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-services-wrapper .estimate-services-title {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-details-wrapper .estimate-details .estimate-detail-single .input-success {
+  border-bottom: 2px solid #469dc9;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-details-wrapper .estimate-details .estimate-detail-single .input-danger {
+  border-bottom: 2px solid #e3342f;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-details-wrapper .estimate-details .estimate-detail-single .msg {
+  font-size: 0.85em;
+  text-align: right;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-details-wrapper .estimate-details .estimate-detail-single .msg-danger {
+  color: #e3342f;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-services-wrapper .estimate-services-title {
   width: 100%;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-services-wrapper .estimate-services-title h3 {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-services-wrapper .estimate-services-title h3 {
   font-size: 1.3em;
   margin-bottom: 45px;
   font-weight: 600;
   margin-top: 20px;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-services-wrapper .estimate-services .estimate-services-single {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-services-wrapper .estimate-services .estimate-services-single {
   cursor: pointer;
   margin-right: 20px;
   margin-bottom: 20px;
@@ -14737,18 +14858,18 @@ body {
   transition: all 0.2s;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-services-wrapper .estimate-services .estimate-services-single:hover {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-services-wrapper .estimate-services .estimate-services-single:hover {
   opacity: 1;
   border: 2px solid #469dc9;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-services-wrapper .estimate-services .estimate-services-single img {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-services-wrapper .estimate-services .estimate-services-single img {
   display: block;
   margin: auto;
   max-width: 60px;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-services-wrapper .estimate-services .estimate-services-single h2 {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-services-wrapper .estimate-services .estimate-services-single h2 {
   text-align: center;
   font-size: 1.1em;
   font-weight: 600;
@@ -14756,32 +14877,41 @@ body {
   line-height: 1.3em;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-services-wrapper .estimate-services .estimate-services-single p {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-services-wrapper .estimate-services .estimate-services-single p {
   line-height: 1.5em;
   text-align: center;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-additional-wrapper .estimate-additional-title {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-services-wrapper .estimate-services .estimate-services-single input {
+  display: none;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-services-wrapper .estimate-services .selectedService {
+  opacity: 1 !important;
+  border: 2px solid #469dc9 !important;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-additional-wrapper .estimate-additional-title {
   width: 100%;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-additional-wrapper .estimate-additional-title h3 {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-additional-wrapper .estimate-additional-title h3 {
   font-size: 1.3em;
   margin-bottom: 45px;
   font-weight: 600;
   margin-top: 20px;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-additional-wrapper .estimate-additional-info {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-additional-wrapper .estimate-additional-info {
   margin-bottom: 20px;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-additional-wrapper .estimate-additional-info label {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-additional-wrapper .estimate-additional-info label {
   display: block !important;
   margin: 0 auto 10px auto;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-additional-wrapper .estimate-additional-info textarea {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-additional-wrapper .estimate-additional-info textarea {
   display: block !important;
   width: 100%;
   border: 2px solid #d2d2d2;
@@ -14790,41 +14920,58 @@ body {
   transition: all 0.2s;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-additional-wrapper .estimate-additional-info textarea:focus {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-additional-wrapper .estimate-additional-info textarea:focus {
   border: 2px solid #469dc9;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-file-wrapper .estimate-file-title {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-additional-wrapper .estimate-additional-info .textarea-success {
+  border: 2px solid #469dc9;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-file-wrapper .estimate-file-title {
   width: 100%;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-file-wrapper .estimate-file-title h3 {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-file-wrapper .estimate-file-title h3 {
   font-size: 1.3em;
   margin-bottom: 45px;
   font-weight: 600;
   margin-top: 20px;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-file-wrapper .estimate-file-upload label {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-file-wrapper .estimate-file-upload label {
   width: 100%;
-  height: 100px;
+  min-height: 100px;
   background: #fbfbfb;
-  border: 2px solid #d2d2d2;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-file-wrapper .estimate-file-upload label input {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-file-wrapper .estimate-file-upload label input {
   display: none;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-file-wrapper .estimate-file-upload label div img {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-file-wrapper .estimate-file-upload label button {
+  border: none;
+  border: 2px solid #d2d2d2;
+  width: 100%;
+  min-height: 100px;
+  background: none;
+  height: 100%;
+  outline: none;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-file-wrapper .estimate-file-upload label button:focus {
+  border: 2px solid #469dc9;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-file-wrapper .estimate-file-upload label button img {
   display: inline-block;
   width: 60px;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-file-wrapper .estimate-file-upload label div p {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-file-wrapper .estimate-file-upload label button p {
   display: inline-block;
   margin: auto;
   color: #d2d2d2;
@@ -14834,60 +14981,63 @@ body {
   margin-left: 15px;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-submit-wrapper {
-  margin-top: 65px;
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-file-wrapper .estimate-file-upload label button .uploadedFileNames {
+  color: #469dc9;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-submit-wrapper .estimate-submit-privacy {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .estimate-file-wrapper .estimate-file-upload label .button-success {
+  border: 2px solid #469dc9;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .privacy-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   margin: 20px auto;
+  margin-top: 60px;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-submit-wrapper .estimate-submit-privacy label {
-  display: block;
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .privacy-wrapper label {
   cursor: pointer;
   margin: auto;
+  display: flex;
+  align-items: center;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-submit-wrapper .estimate-submit-privacy label .label-text::before {
-  content: url("/svg/checkbox1.svg");
-  display: inline-block;
-  top: 2px;
-  position: relative;
-  margin-right: 10px;
-}
-
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-submit-wrapper .estimate-submit-privacy label .label-text a {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .privacy-wrapper label .label-text a {
   color: inherit;
   text-decoration: underline;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-submit-wrapper .estimate-submit-privacy label input {
-  display: none;
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .privacy-wrapper label input {
+  margin-right: 4px;
+  width: 15px;
+  height: 15px;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-submit-wrapper .estimate-submit-privacy label input:checked + .label-text {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .privacy-wrapper label input:checked + .label-text {
   color: #469dc9;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-submit-wrapper .estimate-submit-privacy label input:checked + .label-text::before {
-  content: url("/svg/checkbox2.svg");
-  display: inline-block;
-  top: 2px;
-  position: relative;
-  margin-right: 10px;
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .privacy-wrapper .msg-policy {
+  font-size: 0.85em;
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+  margin-top: 4px !important;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-submit-wrapper .estimate-submit-button {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .privacy-wrapper .msg-danger {
+  color: #e3342f;
+}
+
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .submit-wrapper {
   width: 100%;
-  justify-content: center;
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-submit-wrapper .estimate-submit-button button {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .submit-wrapper button {
   position: relative;
   color: white;
   border: none;
@@ -14908,7 +15058,7 @@ body {
   transform: translate(-50%, 0);
 }
 
-.estimate-section .estimate-wrapper .estimate-content-wrapper .estimate-submit-wrapper .estimate-submit-button button:hover {
+.estimate-section .estimate-wrapper .estimate-content-wrapper form .submit-wrapper button:hover {
   background-size: 200%;
   background-position: 200%;
 }

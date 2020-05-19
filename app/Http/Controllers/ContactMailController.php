@@ -10,6 +10,15 @@ use Illuminate\Support\Facades\Session;
 
 class ContactMailController extends Controller
 {
+  // ===============================
+  // Show contact page
+  public function index()
+  {
+    return view('contact');
+  }
+
+  // ===============================
+  // Contact form
   public function send(Request $request)
   {
     // ------------------------------
@@ -58,6 +67,7 @@ class ContactMailController extends Controller
     // ------------------------------
     // send mail
     Mail::to('hello@pixels.group')->send(new ContactMail($mailObj));
+    // NOTE: change this e-mail address if needed
 
     // ------------------------------
     // sending mail failed

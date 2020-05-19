@@ -37,10 +37,10 @@ class ContactMail extends Mailable
     $filePath = $this->mail->filePath;
 
     return $this->from($senderMail, $senderName)
-      ->subject('Wiadomość z formularza kontaktowego - pixels.group')
+      ->subject('Message from contact form - pixels.group')
       ->replyTo($senderMail, $senderName)
-      ->view('mails.contact')
-      ->text('mails.contact_plain')
+      ->view('mails.contact.contact')
+      ->text('mails.contact.contact_plain')
       ->attach($filePath, [
         'as' => $fileName,
         'mime' => $fileType,

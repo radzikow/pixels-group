@@ -40073,15 +40073,17 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 __webpack_require__(/*! ../../node_modules/slick-carousel/slick/slick */ "./node_modules/slick-carousel/slick/slick.js");
-/* --------------------------*/
-// Animations
-
-/* --------------------------*/
-// require('./animate');
-
 /* --------------------------*/
 // Pge Loader
 
@@ -40261,7 +40263,7 @@ $('#fileInput').change(function () {
 
   reader.readAsDataURL(this.files[0]);
 }); // =================================
-// Login form tooltips: copy/change text
+// Contact form tooltips: copy/change text
 // =================================
 
 var mailBtn = document.getElementById('mailBtn');
@@ -40283,7 +40285,45 @@ if (mailBtn) {
     var mailTooltipText = document.querySelector('.mailTooltipText');
     mailTooltipText.innerHTML = 'Copy';
   });
-}
+} // =================================
+// Upload files in estimate form
+// =================================
+
+
+$('#uploadFilesInput').change(function () {
+  var reader = new FileReader();
+
+  reader.onload = function (e) {
+    var files = $('#uploadFilesInput').prop("files");
+    var filesArray = Array.from(files);
+    $('#uploadFilesBtn').addClass('button-success');
+
+    for (var i = 0; i < filesArray.length; i++) {
+      $('#inputText').html('Uploaded files: ');
+      $('#uploadedFileNames').append(filesArray[i].name + ', ');
+    }
+  };
+
+  reader.readAsDataURL(this.files[0]);
+}); // =================================
+// Estimate form, handle services
+// =================================
+
+var services = _toConsumableArray(document.querySelectorAll('.estimate-services-single'));
+
+services.forEach(function (el) {
+  el.addEventListener('click', function () {
+    var checkbox = el.getElementsByTagName('input')[0];
+
+    if (checkbox.checked == true) {
+      checkbox.checked = false;
+      el.classList.remove('selectedService');
+    } else {
+      checkbox.checked = true;
+      el.classList.add('selectedService');
+    }
+  });
+});
 
 /***/ }),
 
