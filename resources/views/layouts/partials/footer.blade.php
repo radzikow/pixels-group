@@ -21,10 +21,10 @@
       <div class="col-md-3 footer-contact">
         <h2>Contact information</h2>
         <p>
-          M2 4WU, 15 Central St<br>
-          Manchester, UK<br>
-          021 2345 6789<br>
-          contact@pixels.com
+          {{-- M2 4WU, 15 Central St<br>
+          Manchester, UK<br> --}}
+          <b>Phone:</b><br> +48 690 563 222 (PL)<br>
+          <b>E-mail:</b><br> hello@pixels.group
         </p>
         <ul>
           <li><img src="/svg/facebook.svg" alt="Facebook Icon"></li>

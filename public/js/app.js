@@ -40146,7 +40146,7 @@ $(document).ready(function () {
     if (welcomeImageWrapper) {
       welcomeImageWrapper.classList.add('animated', 'fadeInRight', 'showElement');
     }
-  } // Check if element is scrolled into view
+  } // Check if element is scrolled into view (first option)
 
 
   function isScrolledIntoView(elem) {
@@ -40155,13 +40155,22 @@ $(document).ready(function () {
     var elemTop = $(elem).offset().top;
     var elemBottom = elemTop + $(elem).height() - 100;
     return elemBottom <= docViewBottom && elemTop >= docViewTop; // return (elemTop >= docViewTop);
-  } // If element is scrolled into view, fade it in
+  } // Check if element is scrolled into view (another option)
+
+
+  $.fn.isInViewport = function () {
+    var elementTop = $(this).offset().top + 200;
+    var elementBottom = elementTop + $(this).outerHeight();
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+  }; // If element is scrolled into view, fade it in
 
 
   $(window).scroll(function () {
     if ($(window).width() > 1050) {
       $('.title-wrapper').each(function () {
-        if (isScrolledIntoView(this) === true) {
+        if ($(this).isInViewport()) {
           if ($(this).hasClass('hideElement')) {
             $(this).addClass('animated fadeIn');
             $(this).addClass('showElement');
@@ -40169,43 +40178,43 @@ $(document).ready(function () {
         }
       });
       $('.whyus-image-wrapper').each(function () {
-        if (isScrolledIntoView(this) === true) {
+        if ($(this).isInViewport()) {
           $(this).addClass('animated fadeInLeft');
           $(this).addClass('showElement');
         }
       });
       $('.whyus-content-wrapper').each(function () {
-        if (isScrolledIntoView(this) === true) {
+        if ($(this).isInViewport()) {
           $(this).addClass('animated fadeInRight');
           $(this).addClass('showElement');
         }
       });
       $('.services-content').each(function () {
-        if (isScrolledIntoView(this) === true) {
+        if ($(this).isInViewport()) {
           $(this).addClass('animated fadeIn');
           $(this).addClass('showElement');
         }
       });
       $('.ourwork-content-image').each(function () {
-        if (isScrolledIntoView(this) === true) {
+        if ($(this).isInViewport()) {
           $(this).addClass('animated fadeIn');
           $(this).addClass('showElement');
         }
       });
       $('.ourwork-content-info').each(function () {
-        if (isScrolledIntoView(this) === true) {
+        if ($(this).isInViewport()) {
           $(this).addClass('animated fadeInLeft');
           $(this).addClass('showElement');
         }
       });
       $('.ourwork-content-notebook').each(function () {
-        if (isScrolledIntoView(this) === true) {
+        if ($(this).isInViewport()) {
           $(this).addClass('animated fadeInRight');
           $(this).addClass('showElement');
         }
       });
       $('.article-wrapper').each(function () {
-        if (isScrolledIntoView(this) === true) {
+        if ($(this).isInViewport()) {
           $(this).addClass('animated fadeIn');
           $(this).addClass('showElement');
         }
@@ -40323,7 +40332,15 @@ services.forEach(function (el) {
       el.classList.add('selectedService');
     }
   });
-});
+}); // ==================================
+// Cookie popup
+// ==================================
+
+function acceptCookie() {
+  document.cookie = "cookieaccepted=1; expires=Thu, 18 Dec 2030 12:00:00 UTC; path=/", document.getElementById("cookie-notice").style.visibility = "hidden";
+}
+
+document.cookie.indexOf("cookieaccepted") < 0 && (document.getElementById("cookie-notice").style.visibility = "visible");
 
 /***/ }),
 

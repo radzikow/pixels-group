@@ -10939,6 +10939,7 @@ a.text-dark:focus {
 html,
 body {
   font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 .shadow-sm {
@@ -11286,11 +11287,18 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 30px;
+  margin: auto;
 }
 
 .welcome-section .container .row .welcome-text-wrapper .welcome-button-wrapper:hover {
   background-size: 200%;
   background-position: 200%;
+}
+
+@media (min-width: 768px) {
+  .welcome-section .container .row .welcome-text-wrapper .welcome-button-wrapper {
+    margin: 0;
+  }
 }
 
 .welcome-section .container .row .welcome-text-wrapper .welcome-button-wrapper .welcome-button {
@@ -14578,6 +14586,61 @@ body {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+/* --------------------------*/
+
+/* --------------------------*/
+
+.cookie-notification {
+  padding: 15px 0;
+  background: #f8f8f8;
+  box-shadow: 1px 1px 5px 0px rgba(204, 204, 204, 0.7);
+  font-size: 13px;
+  line-height: 40px;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+  width: calc(100% - 20px);
+  max-width: 540px;
+  display: flex;
+  visibility: hidden;
+}
+
+.cookie-notification span {
+  display: inline-block;
+  line-height: 1.5;
+  padding-right: 16px;
+  padding-left: 16px;
+  border-right: 1px solid #b6b6b6;
+}
+
+.cookie-notification span a {
+  display: inline-block;
+  color: #469dc9;
+  text-decoration: none;
+}
+
+.cookie-notification button {
+  background: none;
+  border: none;
+  flex: 1 1 auto;
+  border: none;
+  font-size: 24px;
+  padding: 0 20px 0 16px;
+  position: relative;
+  -ms-grid-row-align: center;
+  align-self: center;
+  color: white;
+  transition: color 0.2s;
+}
+
+.cookie-notification button img {
+  display: block;
+  height: 20px;
+  width: 20px;
 }
 
 /* --------------------------*/

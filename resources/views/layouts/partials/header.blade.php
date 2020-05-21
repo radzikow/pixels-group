@@ -2,8 +2,8 @@
   <div class="container">
 
     {{-- Phone --}}
-    <div class="navbar-phone animated pulse infinite">
-      <a href="tel:555-555-555"><img src="/svg/phone.svg" alt="Call us"></a>
+    <div class="navbar-phone">
+      <a href="tel:+48690563222"><img src="/svg/phone.svg" alt="Call us"></a>
     </div>
 
     {{-- Logo --}}
@@ -51,9 +51,9 @@
     </div>
 
     {{-- Phone number --}}
-    <div id="navbarPhoneNumber" class="navbar-phone-number animated pulse infinite">
-      <img src="/svg/phone.svg" alt="Call us">
-      <a href="tel:555-555-555">CALL US</a>
+    <div id="navbarPhoneNumber" class="navbar-phone-number">
+      {{-- <img src="/svg/phone.svg" alt="Call us"> --}}
+      <a style="text-transform: lowercase;" href="mailto:hello@pixels.group">hello@pixels.group</a>
     </div>
 
   </div>

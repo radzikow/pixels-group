@@ -15,6 +15,8 @@
 
   @include('layouts.partials.footer')
 
+  @include('layouts.partials.cookies')
+
   @include('layouts.partials.footer-scripts')
 
 </body>
